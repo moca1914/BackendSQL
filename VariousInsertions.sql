@@ -1,0 +1,8 @@
+-- General code for populating SecTeam (assigning it to id 1, for example)
+INSERT INTO SecTeam (Operator_id, Name, Role, email) VALUES (1, "name", "role", "email@email.com");
+
+-- General code for populating Assets (assigning it to operator 1, for example)
+INSERT INTO Assets (Asset_id, Hostname, IP_Address, OS, Assigned_Operator) VALUES (100, 'PROD-WEB-01', '10.67.180.68', 'Ubuntu Linux', 1);
+
+-- General code for populating Vulnerabilities (mapping it to Asset 100, for example)
+INSERT INTO Vulnerabilities (Vuln_id, Asset_id, CVE_Identifier, Severity, Is_Patched) VALUES (5000, 100, 'CVE-2024-XXXX', 'Critical', 0);
